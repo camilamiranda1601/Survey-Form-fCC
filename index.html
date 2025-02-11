@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Survey Form</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ff7978;
+        color: #333;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      
+      form {
+        background: #fff;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+      }
+      
+      h1#title {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 2rem;
+      }
+      
+      p#description {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+      
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      
+      textarea {
+        resize: vertical;
+      }
+      
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+      }
+      
+      button#submit {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        color: #fff;
+        background: #0078d4;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      button#submit:hover {
+        background: #005bb5;
+      }
+      
+      select {
+        cursor: pointer;
+      }
+      
+      form p {
+        margin-bottom: 1rem;
+      }
+      
+  </style>
+</head>
+<body>
+  <h1 id="title">Subscribe!</h1>
+  <br><br>
+  <p id="description">We would love to send you our weekly newsletter! Please fill out the form below </p>
+  
+  <form id="survey-form">
+    <label id="name-label" for="name">Name:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      placeholder="Enter your name" 
+      required 
+    />
+    <label id="email-label" for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="Enter your email" 
+      required 
+    />
+    <label id="number-label" for="number">Age:</label>
+    <input 
+      type="number" 
+      id="number" 
+      name="age" 
+      placeholder="Enter your age" 
+      min="18" 
+      max="100" 
+      required 
+    />
+    
+    <label for="dropdown">What are your favorite topics?</label>
+    <select id="dropdown" name="topics">
+      <option value="" disabled selected>Select an option</option>
+      <option value="fashion">Fashion</option>
+      <option value="livestyle">Livestyle</option>
+      <option value="tech">Tech</option>
+      <option value="politics">Politics</option>
+    </select>
+    
+    <p>Which newsletter do you prefer?</p>
+    <label>
+      <input type="radio" name="frequency" value="daily" required /> Daily
+    </label>
+    <label>
+      <input type="radio" name="frequency" value="weekly" /> Weekly
+    </label>
+    <label>
+      <input type="radio" name="frequency" value="monthly" /> Monthly
+    </label>
+    
+    <p>What format do you prefer to read on? (Select all that apply)</p>
+    <label>
+      <input type="checkbox" name="platform" value="desktop" /> Desktop
+    </label>
+    <label>
+      <input type="checkbox" name="platform" value="laptop" /> Laptop
+    </label>
+    <label>
+      <input type="checkbox" name="platform" value="mobile" /> Mobile
+    </label>
+    
+    <label for="comments">Additional Comments:</label>
+    <textarea 
+      id="comments" 
+      name="comments" 
+      rows="4" 
+      placeholder="Enter your comments here..."
+    ></textarea>
+    
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+</html>
